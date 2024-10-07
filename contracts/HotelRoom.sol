@@ -5,7 +5,7 @@ contract HotelRoom{
     address payable public owner;
     event Occupy(address occupant, uint value);
     enum Statuses{Vacant, Occupied}
-    Statuses currentStatus;
+    Statuses public currentStatus;
     constructor(){
         owner=payable(msg.sender);
         currentStatus=Statuses.Vacant;
